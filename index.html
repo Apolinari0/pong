@@ -1,0 +1,86 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebGL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Doto:wght@100..900&family=Playpen+Sans:wght@100..800&family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <script src="gl-matrix-min.js" defer></script>
+    <script src="main.js" defer></script>
+    <script  id="vertex-shader-2d" type="notjs">
+      attribute vec2 position;
+      
+      uniform mat4 matrix;
+
+      void main() {
+        gl_Position = matrix * vec4(position, 0, 1);
+        gl_PointSize = 5.0;
+      }
+    
+    </script>
+    <script  id="fragment-shader-2d" type="notjs">
+      precision mediump float;
+
+      uniform vec3 color;
+
+      void main() {
+        gl_FragColor = vec4(color,1.0);
+      }
+    </script>
+    
+</head>
+<body>
+ 
+  <div class="tela-game">
+ 
+    <dialog id="gameDialog">
+      <div class="sobre">
+      <h2 class="titulo"> GAME PONG </h2>
+      <p>Player 1: Jogador à ESQUERDA da tela, controlado pelas teclas:</p>
+      <p> W & S - Sendo W Movimentação para cima e S movimenta para baixo</p>
+    </div>
+      <hr>
+
+    
+      <p>Player 2: Jogador à DIREITA da tela, controlado pelas teclas:</p>
+      <p>↑ & ↓ - Sendo ↑ Movimentação para cima e ↓  movimenta para baixo</p>
+      
+      <div class="Desenvolvedores">
+      <h3> Desenvolvedores: </h3>
+      <p><a href="https://www.linkedin.com/in/arthur-losano-5606ab235/" target="_blank">Arthur Losano</a></p>
+      <p><a href="https://www.linkedin.com/in/bruno-fernandes-marques-8859311b6/" target="_blank">Bruno Fernandes</a></p>
+      <p><a href="https://www.linkedin.com/in/lucas-apolinario-a62558238/" target="_blank">Lucas Apolinario</a></p>
+    </div>
+    
+      <button class="buttons" type="button" onclick="closeDialog()">Close</button>
+    </dialog>
+    
+    
+    <h1>GAME PONG</h1>
+    <div class="score-and-button">
+      <input class="player1-name" type="text" id="player1-name" placeholder="Player 1 Name" />
+      <button class="start" type="button" onclick="startGame()">START GAME!</button>
+      <input class="player2-name" type="text" id="player2-name" placeholder="Player 2 Name" /> 
+      <button class="buttons" type="button" onclick="openDialog()">SOBRE</button> 
+    </div>
+  
+    <div class="name">
+      <p id="player1"></p>
+      <p id="player2"></p>
+    </div>
+  
+    <canvas id="canvas" width="1000" height="500"></canvas>
+    <p class="winner" id="win"></p>
+  
+   
+  </div>
+  
+</body>
+</html>
