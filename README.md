@@ -27,3 +27,7 @@ Tecnologias Utilizadas:
 - JAVASCRIPT (WebGL)
     Para o desenvolvimento do jogo, utilizamos o WebGl, uma API JavaScript que permite renderizar gráficos 3D e 2D de alta performance diretamente em navegadores web
    sem a necessidade de plugins adicionais. Com WebGL, podemos criar visualizações complexas e interativas, como jogos, simulações científicas e ambientes gráficos.
+
+
+Clone o repositorio utilizando o comando: git clone https://github.com/Apolinari0/pong.git
+
