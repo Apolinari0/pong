@@ -1,0 +1,137 @@
+body {
+  background: linear-gradient(#453c3c, #c9cce7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.tela-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5px; 
+}
+
+h1 {
+  text-align: center;
+  font-family: "Doto", sans-serif;
+  font-size: 70px;
+  color: #fdfdfd;
+}
+
+.score-and-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  display: flex;
+  width: 100%;
+  font-family: "Playpen Sans", cursive;
+  font-size: 30px;
+  font-style: normal;
+}
+
+#player1 {
+  margin-right: auto; /* Empurra player1 para a esquerda */
+}
+
+#player2 {
+  margin-left: auto; /* Empurra player2 para a direita */
+}
+
+
+input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.start {
+  background-color: green;
+  color: white;
+  font-size: larger;
+  border-radius: 10px;
+  height: 35px;
+  width: 160px;
+  border: none;
+  cursor: pointer;
+}
+
+canvas {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 800px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.winner {
+  font-size: 45px;
+  color: rgb(29, 117, 29);
+  font-family:'Times New Roman', Times, serif;
+  align-items: center;
+}
+
+
+/* Estilos gerais do dialog */
+dialog {
+  width: 80%; /* Tamanho do dialog */
+  max-width: 600px; /* Largura máxima */
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background-color: #f4f4f4;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Centraliza o texto dentro do dialog */
+}
+
+
+.titulo, h3 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+a {
+  text-decoration: none; 
+  color: #007BFF; 
+  margin: 0 15px; 
+  font-weight: bold; 
+}
+
+/* Remover a cor de quando o link é visitado */
+a:visited {
+  color: #007BFF;
+}
+
+.Desenvolvedores p {
+  display: inline-block; 
+  margin: 5px 0;
+  padding: 10px;
+}
+
+
+button.buttons {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
